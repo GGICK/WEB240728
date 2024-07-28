@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function LinksSetColor(color){
+            var list = document.querySelectorAll('a')
+            i = 0;
+            while(i < list.length){
+                list[i].style.color = color;
+                i = i + 1;
+            }
+        }
+        function BodySetColor(color){
+            document.querySelector('body').style.color = color;
+        }
+        function BodySetBackGroudColor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        function nightdayhandler(self){
+        var target = document.querySelector('body')
+            if(self.value === 'night'){
+            BodySetBackGroudColor('black');
+            BodySetColor('white');
+            self.value = 'day';
+            LinksSetColor('powderblue')
+
+         }
+            else{
+            BodySetBackGroudColor('white');
+            BodySetColor('black');
+            self.value = 'night';
+            LinksSetColor('blue')
+        }
+    }
+    </script>
+</head>
+<body>
+    
+    <h1>버튼을 이용해 전부 혼합</h1>
+    <input type="button" value="night" onclick="
+    nightdayhandler(this);
+    ">
+<ul>
+    <li><a href="1. esle.html" >테스트용</a></li>
+    <li><a href="2. array.html" >테스트용</a></li>
+    <li><a href="3. 반복문.html" >테스트용</a></li>
+    <li><a href="4. array와반복문.html" >테스트용</a></li>
+</ul>
+</body>
+</html>

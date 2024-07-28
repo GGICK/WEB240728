@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function nightdayhandler(self){
+        var target = document.querySelector('body')
+            if(self.value === 'night'){
+            target.style.background = 'black';
+            target.style.color = 'white';
+            self.value = 'day';
+
+            var list = document.querySelectorAll('a')
+            i = 0;
+            while(i < list.length){
+                list[i].style.color = 'red';
+                i = i + 1;
+            }
+
+         }
+            else{
+            target.style.background = 'white';
+            target.style.color = 'black';
+            self.value = 'night';
+
+            var list = document.querySelectorAll('a')
+            i = 0;
+            while(i < list.length){
+                list[i].style.color = 'orange';
+                i = i + 1;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    
+    <h1>버튼을 이용해 전부 혼합</h1>
+    <input type="button" value="night" onclick="
+    nightdayhandler(this);
+    ">
+<ul>
+    <li><a href="1. esle.html" >테스트용</a></li>
+    <li><a href="2. array.html" >테스트용</a></li>
+    <li><a href="3. 반복문.html" >테스트용</a></li>
+    <li><a href="4. array와반복문.html" >테스트용</a></li>
+</ul>
+</body>
+</html>

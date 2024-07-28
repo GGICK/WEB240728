@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object 객체</h1>
+    <h2>객체 생성법</h2>
+    <script>
+        var adventurer = {
+            "worrior":["hero", "paladin", "dark knight"],
+            "archer":["bowmaster", "shrine", "pathfinder"],
+            "wizard":["wizard(thunder,cold)", "wizard(fire,poison)", "bishop"],
+            "thief":["nightlord", "shadower", "dual blader"],
+            "pirate":["captain", "viper", "cannonshooter"]
+        }
+        document.write("worrior: "+adventurer.worrior+"<br>");
+        document.write("archer: "+adventurer.archer+"<br>");
+        document.write("wizard: "+adventurer.wizard+"<br>");
+        document.write("theif: "+adventurer.thief+"<br>");
+        document.write("pirate: "+adventurer.pirate+"<br>");
+    </script>
+    <br>
+    <h2>객체 생성 간략화</h2>
+    <script>
+        for(var key in adventurer){
+            document.write(key+' : '+adventurer[key]+'<br>')
+        }
+    </script>
+    
+</body>
+</html>
